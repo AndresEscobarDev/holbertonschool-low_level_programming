@@ -1,4 +1,4 @@
 #!/bin/bash
 git add --all
-git commit -m "0x02. Shell, I/O Redirections and filters"
+git commit -m "0x00. C - Hello, World TAKS"
 git push origin master
