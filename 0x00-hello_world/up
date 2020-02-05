@@ -1,0 +1,4 @@
+#!/bin/bash
+git add --all
+git commit -m "0x02. Shell, I/O Redirections and filters"
+git push origin master
