@@ -1,0 +1,4 @@
+#!/bin/bash
+git add --all
+git commit -m "0x01. C - Variables, if, else, while TASKS"
+git push origin master
