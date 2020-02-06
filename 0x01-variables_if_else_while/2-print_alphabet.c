@@ -1,16 +1,17 @@
+#include <stdio.h>
+
 /**
- * main - Entry point
+ * main - Alphabet
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int c;
+	int i;
 
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		c = tolower(c);
-		putchar(c);
+	for (i = 97; i < 123; i++){
+		putchar (i);
 	}
-	return (0);
+	putchar ('\n');
+      	return (0);
 }
