@@ -14,8 +14,8 @@ int main(void)
 	{
 		if (n % 3 == 0 || n % 5 == 0)
 		{
-			s = s +n;
+			s = s + n;
 		}
 	}
-	printf ("%i\n", s);
+	printf("%i\n", s);
 }
