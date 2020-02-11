@@ -1,0 +1,4 @@
+#!/bin/bash
+git add --all
+git commit -m "0x02. C - Functions, nested loops TASKS"
+git push origin master
