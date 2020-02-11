@@ -17,11 +17,11 @@ int main(void)
 		p = m + o;
 		m = o;
 		o = p;
-		if(m % 2 == 0)
+		if (m % 2 == 0)
 		{
 			n = n + m;
 		}
 	}
-	printf ("%lu\n", n);
+	printf("%lu\n", n);
 	return (0);
 }
