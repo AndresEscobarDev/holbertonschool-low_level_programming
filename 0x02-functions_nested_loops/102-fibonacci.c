@@ -7,19 +7,21 @@
 
 int main(void)
 {
-	 unsigned long int n, m, o;
+	unsigned long int n, m, o, p;
 
 	m = 1;
-	o = 2;
+	o = 1;
 	for (n = 1; n < 51; n++)
 	{
-		printf("%lu", m);
+		p = m + o;
 		m = o;
-		o = o + m;
+		o = p;
+		printf("%lu", m);
 		if (n < 49)
 		{
 			printf(", ");
 		}
 	}
+	printf("\n");
 	return (0);
 }
