@@ -11,7 +11,7 @@ int main(void)
 
 	m = 1;
 	o = 1;
-	for (n = 0; n < 51; n++)
+	for (n = 0; n < 50; n++)
 	{
 		p = m + o;
 		m = o;
