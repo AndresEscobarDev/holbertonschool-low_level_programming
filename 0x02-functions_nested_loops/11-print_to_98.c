@@ -1,8 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - check the code for Holberton School students.
- *
+ * print_to_98 - natural numbers since 98.
+ * @n: number.
  * Return: Always 0.
  */
 void print_to_98(int n)
