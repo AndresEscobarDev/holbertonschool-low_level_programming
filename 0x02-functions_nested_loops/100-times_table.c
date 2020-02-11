@@ -1,14 +1,15 @@
 #include "holberton.h"
 
 /**
- * times_table - 9 times table.
- *
+ * print_times_table - n times table.
+ * @n: number of the table.
  * Return: Always 0.
  */
 void print_times_table(int n)
 {
 	int x, y, z;
-	if(n <= 15 && n >= 0)
+
+	if (n <= 15 && n >= 0)
 	{
 	for (x = 0; x <= n; x++)
 	{
@@ -19,15 +20,13 @@ void print_times_table(int n)
 			{
 				_putchar(' ');
 				if (z < 10)
-				{
 					_putchar(' ');
-				}
 			}
-		        if (z > 99)
+			if (z > 99)
 			{
 				_putchar(z / 100 + '0');
 				_putchar((z / 10) % 10 + '0');
-				_putchar(z % 10 +'0');
+				_putchar(z % 10 + '0');
 			}
 			else
 				if (z < 100 && z > 9)
