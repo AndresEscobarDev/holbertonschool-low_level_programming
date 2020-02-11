@@ -1,12 +1,16 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * main - tests function that prints if integer is positive or negative
+ * Return: 0
  */
+
 int main(void)
 {
-	postitive_or_negative(0);
+	int i;
+
+	i = 0;
+	positive_or_negative(i);
+
 	return (0);
 }
