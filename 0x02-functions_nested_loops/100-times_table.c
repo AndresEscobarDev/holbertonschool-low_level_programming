@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * times_table - 9 times table.
  *
@@ -17,19 +17,35 @@ void print_times_table(int n)
 			z = x * y;
 			if (z < 100 && y != 0)
 			{
-				printf(" ");
+				_putchar(' ');
 				if (z < 10)
 				{
-					printf(" ");
+					_putchar(' ');
 				}
 			}
-		        printf ("%i", z);
+		        if (z > 99)
+			{
+				_putchar(z / 100 + '0');
+				_putchar((z / 10) % 10 + '0');
+				_putchar(z % 10 +'0');
+			}
+			else
+				if (z < 100 && z > 9)
+				{
+					_putchar(z / 10 + '0');
+					_putchar(z % 10 + '0');
+				}
+				else
+				{
+					_putchar(z + '0');
+				}
 			if (y != n)
 			{
-				printf(", ");
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 	}
 }
