@@ -1,17 +1,25 @@
-#include "holberton.h"
+#include <stdio.h>
 
 /**
- * main - tests function that prints if integer is positive or negative
+ * main - 50 de fibonacci.
  * Return: 0
  */
 
 int main(void)
 {
-	int n, s;
+	 unsigned long int n, m, o;
 
-	s = 1;
-	for(n = 0; n < 50; n++)
+	m = 1;
+	o = 2;
+	for (n = 1; n < 51; n++)
 	{
-		s = 
+		printf("%lu", m);
+		m = o;
+		o = o + m;
+		if (n < 49)
+		{
+			printf(", ");
+		}
 	}
+	return (0);
 }
