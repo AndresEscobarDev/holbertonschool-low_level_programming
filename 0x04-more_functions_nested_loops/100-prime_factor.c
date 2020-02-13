@@ -6,11 +6,12 @@
  */
 int main (void)
 {
-	long i, n, f;
+	long i, n, f, p;
 
 	f = 0;
 	n = 612852475143;
-	for (i = 2; i <= 612852475143; i++ )
+	p = 50829599;
+	for (i = 2; i <= p; i++ )
 	{
 		while (n % i == 0)
 		{
@@ -19,6 +20,6 @@ int main (void)
 				f = i;
 		}
 	}
-	printf("%li", f);
+	printf("%li\n", f);
 	return (0);
 }
