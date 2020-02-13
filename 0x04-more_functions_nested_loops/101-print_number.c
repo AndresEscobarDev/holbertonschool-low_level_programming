@@ -36,5 +36,4 @@ void print_number(int n)
 		s = s % m;
 		m = m / 10;
 	}
-	_putchar('\n');
 }
