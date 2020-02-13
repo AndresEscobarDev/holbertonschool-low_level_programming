@@ -1,0 +1,4 @@
+#!/bin/bash
+git add --all
+git commit -m "0x04. C - More functions, more nested loops TASKS"
+git push origin master
