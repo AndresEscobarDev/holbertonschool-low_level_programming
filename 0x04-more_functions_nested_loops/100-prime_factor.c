@@ -4,14 +4,14 @@
  *
  * Return: Always 0.
  */
-int main (void)
+int main(void)
 {
 	long i, n, f, p;
 
 	f = 0;
 	n = 612852475143;
 	p = 50829599;
-	for (i = 2; i <= p; i++ )
+	for (i = 2; i <= p; i++)
 	{
 		while (n % i == 0)
 		{
