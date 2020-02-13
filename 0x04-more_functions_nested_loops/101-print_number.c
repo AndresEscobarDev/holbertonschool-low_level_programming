@@ -18,7 +18,7 @@ void print_number(int n)
 	}
 	m = 10;
 	d = 1;
-	for (i = 0; i <= 12; i++)
+	for (i = 0; i <= 30; i++)
 	{
 		if (n / m > 0)
 		{
