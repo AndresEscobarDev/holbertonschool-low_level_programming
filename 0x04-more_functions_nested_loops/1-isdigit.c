@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * _isdigit - numeros.
+ * @c: numbers.
+ * Return: depends.
+ */
 int _isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

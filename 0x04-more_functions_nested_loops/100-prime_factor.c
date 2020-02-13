@@ -1,5 +1,9 @@
 #include <stdio.h>
-
+/**
+ * main - prime factors.
+ *
+ * Return: Always 0.
+ */
 int main (void)
 {
 	long i, n, f;

@@ -1,5 +1,9 @@
 #include "holberton.h"
-
+/**
+ * more_numbers - lot of numbers.
+ *
+ * Return: Nothing.
+ */
 void more_numbers(void)
 {
 	int i, j;

@@ -1,8 +1,13 @@
 #include "holberton.h"
-
+/**
+ * print_diagonal - Print a diagonal line.
+ * @n: number.
+ * Return: Nothing.
+ */
 void print_diagonal(int n)
 {
 	int i, j;
+
 	if (n >= 0)
 	{
 	for (j = 0; j < n; j++)
