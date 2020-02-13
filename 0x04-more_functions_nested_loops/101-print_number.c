@@ -8,7 +8,7 @@
 
 void print_number(int n)
 {
-	int i, j, s, d, m;
+	int i, j, d, m;
 
 	j = 0;
 	if (n < 0)
@@ -17,11 +17,10 @@ void print_number(int n)
 		j = -1;
 	}
 	m = 10;
-	s = n;
 	d = 1;
 	for (i = 0; i <= 10; i++)
 	{
-		if (s / m > 0)
+		if (n / m > 0)
 		{
 			m *= 10;
 			d++;
@@ -30,10 +29,11 @@ void print_number(int n)
 	m = m / 10;
 	if (j == -1)
 		_putchar('-');
-	for (; d > 0; d--)
+	while (d > 0)
 	{
-		_putchar('0' + s / m);
-		s = s % m;
+		_putchar('0' + n / m);
+		n = n % m;
 		m = m / 10;
+		d--;
 	}
 }
