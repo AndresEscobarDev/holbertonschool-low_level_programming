@@ -8,8 +8,8 @@
 
 int _atoi(char *s)
 {
-	int i, j, n;
-	unsigned int m;
+	int n;
+	unsigned int i, j, m;
 
 	i = 0;
 	m = 0;
@@ -21,7 +21,7 @@ int _atoi(char *s)
 	{
 		m = (m * 10) + (s[j] - '0');
 	}
-	if (s[i - 1] == '-' && i > 0)
+	if (i > 0 && s[i - 1] == '-')
 	{
 		n = m * (-1);
 		return (n);
