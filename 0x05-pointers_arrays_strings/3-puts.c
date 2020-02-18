@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _puts - print string.
+ * @str: string.
+ * Return: Nothing.
  */
 void _puts(char *str)
 {
