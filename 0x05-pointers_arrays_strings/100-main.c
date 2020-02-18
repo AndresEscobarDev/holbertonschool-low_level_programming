@@ -26,9 +26,5 @@ int main(void)
 	printf("%d\n", n);
 	n = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
 	printf("%d\n", n);
-	n = _atoi("--jbdskagk-2147483648 -++ Sui - te -   402 #cisfun :)");
-	printf("%d\n", n);
-	n = _atoi("--jbdskagk2147483647 -++ Sui - te -   402 #cisfun :)");
-	printf("%d\n", n);
 	return (0);
 }

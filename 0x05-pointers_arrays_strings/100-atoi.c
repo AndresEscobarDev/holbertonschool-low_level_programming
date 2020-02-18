@@ -16,9 +16,9 @@ int _atoi(char *s)
 	sig = 0;
 	while ((s[i] < '1' || s[i] > '9') && s[i])
 	{
-		i++;
 		if (s[i] == '-')
 			sig++;
+		i++;
 	}
 	for (j = i; s[j] >= '0' && s[j] <= '9'; j++)
 	{
