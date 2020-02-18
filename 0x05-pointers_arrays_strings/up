@@ -1,0 +1,4 @@
+#!/bin/bash
+git add --all
+git commit -m "0x05. C - Pointers, arrays and strings TASKS"
+git push origin master
