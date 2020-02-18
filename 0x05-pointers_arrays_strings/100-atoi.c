@@ -20,7 +20,7 @@ int _atoi(char *s)
 	{
 		n = (n * 10) + (s[j] - '0');
 	}
-	if (s[i - 1] == '-')
+	if (s[i - 1] == '-' && i > 0)
 		n = n * (-1);
 	return (n);
 }
