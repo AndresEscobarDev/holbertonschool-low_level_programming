@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * string_toupper - Transform all lower case to uppercase.
+ * @s: String.
  * Return: Always 0.
  */
 char *string_toupper(char *s)
@@ -11,7 +11,7 @@ char *string_toupper(char *s)
 
 	while (s[i])
 		i++;
-	for(j = 0; j < i; j++)
+	for (j = 0; j < i; j++)
 	{
 		if (s[j] >= 'a' && s[j] <= 'z')
 		{
