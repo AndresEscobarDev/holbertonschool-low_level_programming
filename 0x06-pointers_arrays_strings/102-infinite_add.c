@@ -1,9 +1,12 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * infinite_add - Sum giants numbers.
+ *@n1:numero 1.
+ *@n2:numero 2.
+ *@r:resultado.
+ *@size_r:comparador.
+ * Return: r or 0.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
@@ -16,7 +19,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j++;
 	i--;
 	j--;
-	for(k = 0; i >= 0 && j >=0; k++, i--, j--)
+	for (k = 0; i >= 0 && j >= 0; k++, i--, j--)
 	{
 		if ((n1[i] - '0' + n2[j] - '0' + l) > 9)
 		{
@@ -32,7 +35,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 		if (i >= 0)
 		{
-			for (;i >= 0; k++, i--)
+			for (; i >= 0; k++, i--)
 			{
 				if ((n1[i] - '0' + l) > 9)
 				{
@@ -49,7 +52,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		else if (j >= 0)
 		{
-			for (;j >= 0; k++, j--)
+			for (; j >= 0; k++, j--)
 			{
 				if ((n2[j] - '0' + l) > 9)
 				{
