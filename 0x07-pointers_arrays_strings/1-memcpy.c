@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
+ * _memcpy - Copy n chars from src to dest.
+ * @dest: dest of de copy.
+ * @src: strng to copy.
+ * @n: numbers of chars to copy.
  * Return: Nothing.
  */
 char *_memcpy(char *dest, char *src, unsigned int n)

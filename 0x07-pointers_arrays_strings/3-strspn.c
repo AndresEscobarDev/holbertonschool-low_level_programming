@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
- *
+ * _strspn - function that gets the length of a prefix substring.
+ * @s: String.
+ * @accept: comparator.
  * Return: Always 0.
  */
 unsigned int _strspn(char *s, char *accept)

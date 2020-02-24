@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
- *
+ * _strpbrk - function that searches a string for any of a set of bytes.
+ * @s: String.
+ * @accept: comparator.
  * Return: Always 0.
  */
 char *_strpbrk(char *s, char *accept)
@@ -21,5 +22,5 @@ char *_strpbrk(char *s, char *accept)
 		if (b == 1)
 			break;
 	}
-	return(&s[i--]);
+	return (&s[i--]);
 }
