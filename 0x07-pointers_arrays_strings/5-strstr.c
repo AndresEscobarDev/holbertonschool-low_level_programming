@@ -7,27 +7,20 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, k, l, m = -1;
+	int i;
 
-	for (j = 0; needle[j]; j++)
-		l = j;
-	for (i = 0; haystack[i]; i++)
+	if (*needle == '\0')
+		return (haystack);
+	while (*haystack)
 	{
-		for (k = i, j = 0; haystack[k] == needle[j] && haystack[k]; k++, j++)
+		for (i = 0; needle[i]; i++)
 		{
-			if (j == l)
-			{
-				m = i;
+			if (needle[i] != haystack[i])
 				break;
-			}
+			if (needle[i + 1] == 0)
+				return (haystack);
 		}
-		if (m == i)
-			break;
+		haystack++;
 	}
-	if (m == i)
-	{
-		return (&haystack[m]);
-	}
-	else
-		return (&needle[l + 1]);
+	return ('\0');
 }
