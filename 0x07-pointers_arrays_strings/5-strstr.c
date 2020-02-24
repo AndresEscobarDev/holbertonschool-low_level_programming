@@ -3,7 +3,7 @@
  * _strstr -  function that locates a substring.
  * @haystack: String.
  * @needle: Substring.
- * Return: Always 0.
+ * Return: NULL or haystack.
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -26,7 +26,7 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (m == i)
 	{
-		return (&haystack[m]);
+		return (&haystack[m - 1]);
 	}
 	else
 		return ('\0');
