@@ -1,12 +1,13 @@
 #include "holberton.h"
 /**
- * main - check the code for Holberton School students.
- *
+ * _strstr -  function that locates a substring.
+ * @haystack: String.
+ * @needle: Substring.
  * Return: Always 0.
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, k, l, m;
+	int i, j, k, l, m = -1;
 
 	for (j = 0; needle[j]; j++)
 		l = j;
@@ -22,9 +23,8 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (m == i)
 	{
-		_putchar('R');
 		return (&haystack[m]);
 	}
 	else
-		return (&haystack[i]);
+		return ('\0');
 }
