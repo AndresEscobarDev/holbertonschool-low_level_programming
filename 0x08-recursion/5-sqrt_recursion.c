@@ -9,8 +9,10 @@ int pow_number(long int n, long int m)
 {
 	if (m * m == n)
 		return (m);
-	if (m >= 0)
+	if (m > 0)
 		m = pow_number(n, m - 1);
+	if (m == 0)
+		return (-1);
 	return (m);
 }
 /**
