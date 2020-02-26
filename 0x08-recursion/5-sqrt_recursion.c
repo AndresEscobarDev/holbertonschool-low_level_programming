@@ -5,15 +5,15 @@
  * @m: Number.
  * Return: m.
  */
-int pow_number(long int n, long int m)
+int pow_number(int n, int m)
 {
 	if (m * m == n)
 		return (m);
-	if (m > 0)
-		m = pow_number(n, m - 1);
-	if (m == 0)
-		return (-1);
-	return (m);
+	if (m <= n)
+		m = pow_number(n, m + 1);
+	if (m * m == n)
+                return (m);
+	return (-1);
 }
 /**
  * _sqrt_recursion - function that returns the natural square root of a number.
@@ -24,5 +24,5 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (pow_number(n, n));
+	return (pow_number(n, 0));
 }
