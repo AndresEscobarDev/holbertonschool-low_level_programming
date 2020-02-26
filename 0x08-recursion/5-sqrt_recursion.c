@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 /**
  * pow_number - function that returns the square root of a number.
  * @n: Number.
