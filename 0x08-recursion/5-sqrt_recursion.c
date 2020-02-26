@@ -5,7 +5,7 @@
  * @m: Number.
  * Return: m.
  */
-int pow_number(int n, int m)
+int pow_number(long int n, long int m)
 {
 	if (m * m == n)
 		return (m);
