@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 /**
  * pow_number - function that returns the square root of a number.
  * @n: Number.
@@ -12,7 +12,7 @@ int pow_number(int n, int m)
 	if (m <= n)
 		m = pow_number(n, m + 1);
 	if (m * m == n)
-                return (m);
+		return (m);
 	return (-1);
 }
 /**
