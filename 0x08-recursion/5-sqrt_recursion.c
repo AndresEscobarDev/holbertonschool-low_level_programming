@@ -7,14 +7,10 @@
  */
 int pow_number(int n, int m)
 {
-	if (m * m != n && m > 0)
-	{
-		m = pow_number(n, m - 1);
-	}
-	else if (m * m == n)
-	{
+	if (m * m == n)
 		return (m);
-	}
+	if (m >= 0)
+		m = pow_number(n, m - 1);
 	return (m);
 }
 /**
@@ -24,14 +20,7 @@ int pow_number(int n, int m)
  */
 int _sqrt_recursion(int n)
 {
-	if (n == 0)
-		return (0);
 	if (n < 0)
 		return (-1);
-	if (n > 0)
-	{
-		if (pow_number(n, n) * pow_number(n, n) == n)
-			return (pow_number(n, n));
-	}
-	return (-1);
+	return (pow_number(n, n));
 }
