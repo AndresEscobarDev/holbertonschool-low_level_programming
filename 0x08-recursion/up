@@ -1,4 +1,4 @@
 #!/bin/bash
 git add --all
-git commit -m "0x08. C - Recursion TASKS"
+git commit -m "Corrections  y 0x09. C - Static libraries TASKS"
 git push origin master
