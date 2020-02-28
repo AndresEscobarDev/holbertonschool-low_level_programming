@@ -1,0 +1,4 @@
+#!/bin/bash
+git add --all
+git commit -m "Corrections  y 0x09. C - Static libraries TASKS"
+git push origin master
