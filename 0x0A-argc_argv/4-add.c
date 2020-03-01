@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * main - Add the arguments passed into it.
  * @argc: Last index of argv.
@@ -9,24 +9,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, s = 0;
+	int i, j, s = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[i]))
+		for (j = 0; argv[i][j]; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-			s += atoi(argv[i]);
+		s += atoi(argv[i]);
 	}
-
-	if (argc == 0)
-	{
-		return (0);
-	}
-
 	printf("%d\n", s);
-	return (0);
 }
