@@ -9,24 +9,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, s;
+	int i, s = 0;
 
-	if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		if (!atoi(argv[i]))
 		{
-			if (!atoi(argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-				s += atoi(argv[i]);
+			printf("Error\n");
+			return (1);
 		}
-		printf("%d\n", s);
-		return (0);
+		else
+			s += atoi(argv[i]);
 	}
-	else
-		printf("0\n");
+	printf("%d\n", s);
 	return (0);
 }
