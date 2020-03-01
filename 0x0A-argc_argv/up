@@ -1,0 +1,4 @@
+#!/bin/bash
+git add --all
+git commit -m "0x0A. C - argc, argv TASKS"
+git push origin master
