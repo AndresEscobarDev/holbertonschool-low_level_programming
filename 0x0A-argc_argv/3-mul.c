@@ -9,7 +9,8 @@
 int main(int argc, char *argv[])
 {
 	int m1, m2, r;
-	if (argc == 3)
+
+	if (argc >= 3)
 	{
 		m1 = atoi(argv[1]);
 		m2 = atoi(argv[2]);
