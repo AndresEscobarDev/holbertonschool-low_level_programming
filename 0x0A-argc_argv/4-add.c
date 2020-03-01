@@ -5,7 +5,7 @@
  * main - Add the arguments passed into it.
  * @argc: Last index of argv.
  * @argv: Pointer.
- * Return: Always 0.
+ * Return: 0 or 1.
  */
 int main(int argc, char *argv[])
 {
