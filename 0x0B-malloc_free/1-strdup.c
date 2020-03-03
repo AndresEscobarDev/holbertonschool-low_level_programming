@@ -14,7 +14,14 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return ('\0');
 	if (*str == '\0')
-		return (malloc(sizeof(char)));
+	{
+		s = malloc(sizeof(char));
+		if (s == NULL)
+			return ('\0');
+		*s = '\0';
+		return (s);
+
+	}
 	while (str[n])
 		n++;
 	s = malloc((n) * sizeof(char));
