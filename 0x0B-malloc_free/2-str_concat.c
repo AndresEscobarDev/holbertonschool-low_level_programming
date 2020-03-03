@@ -13,12 +13,19 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, j = 0, k, t;
 	char *s;
 
-	while (s1[i] || s2[j])
+	if (s1 == '\0')
+		i = 1;
+	else
 	{
-		if (s1[i])
+		while (s1[i])
 			i++;
-		if (s2[j])
-			j++;
+	}
+	if (s2 == '\0')
+		j = 1;
+	else
+	{
+		while (s2[j])
+			j++;		
 	}
 	t = i + j - 1;
 	s = malloc(t * sizeof(char));
