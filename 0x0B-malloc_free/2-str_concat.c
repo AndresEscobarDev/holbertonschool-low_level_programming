@@ -25,10 +25,10 @@ char *str_concat(char *s1, char *s2)
 	else
 	{
 		while (s2[j])
-			j++;		
+			j++;
 	}
 	t = i + j - 1;
-	s = malloc(t * sizeof(char));
+	s = malloc(t + 1 * sizeof(char));
 	if (s == '\0')
 		return ('\0');
 	for (k = 0; k <= t; k++)
