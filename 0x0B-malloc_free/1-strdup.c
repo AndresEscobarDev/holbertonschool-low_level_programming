@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	char *s;
 
 	if (str == '\0')
-		return ('\0')
+		return ('\0');
 	while (str[n])
 		n++;
 	s = malloc(n * sizeof(char));
