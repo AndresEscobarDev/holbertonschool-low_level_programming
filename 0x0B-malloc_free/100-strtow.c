@@ -48,7 +48,7 @@ char **strtow(char *str)
 	char **s;
 	int i, j = 0, k, n = count(str);
 
-	if (str == 0 || str == "")
+	if (str == 0 || *str == 0)
 		return (0);
 	i = 0;
 	s = malloc((n + 1) * sizeof(char *));
