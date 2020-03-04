@@ -49,7 +49,7 @@ char **strtow(char *str)
 	int i, j = 0, k, n = count(str);
 
 	i = 0;
-	s = malloc(n + 1 * sizeof(char *));
+	s = malloc((n + 1) * sizeof(char *));
 	if (s == 0)
 		return (0);
 	while (*str)
