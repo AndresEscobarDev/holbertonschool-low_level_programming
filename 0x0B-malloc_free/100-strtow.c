@@ -30,10 +30,11 @@ int count(char *str)
  */
 void clean(char **s, int i)
 {
-	while (i >= 0)
+	int j = 0;
+	while (j < i)
 	{
-		free(s[i]);
-		i--;
+		free(s[j]);
+		j++;
 	}
 	free(s);
 }
@@ -63,10 +64,9 @@ char **strtow(char *str)
 			k = 0;
 			while (str[k] && str[k] != ' ')
 				k++;
-			s[i] = malloc((k + 1)* sizeof(char));
+			s[i] = malloc((k + 1) * sizeof(char));
 			if (s[i] == 0)
 			{
-				i--;
 				clean(s, i);
 				return (0);
 			}
