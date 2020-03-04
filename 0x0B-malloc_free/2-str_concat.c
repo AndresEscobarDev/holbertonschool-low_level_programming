@@ -34,13 +34,9 @@ char *str_concat(char *s1, char *s2)
 	for (k = 0; k < t; k++)
 	{
 		if (k < i)
-		{
 			s[k] = s1[k];
-		}
 		else
-		{
 			s[k] = s2[k - i];
-		}
 	}
 	return (s);
 }
