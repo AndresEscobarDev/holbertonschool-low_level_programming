@@ -52,8 +52,8 @@ int _strlen(char *s)
 }
 /**
  * main - multiply two numbers
- * @argc - Number of numbers.
- * @nums - Numbers.
+ * @argc: Number of numbers.
+ * @nums: Numbers.
  * Return: 98 || 0 .
  */
 int main(int argc, char *nums[])
