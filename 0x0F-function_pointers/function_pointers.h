@@ -1,5 +1,5 @@
 #ifndef FUNCTIONS_H
-#define FUNTIONS_H
+#define FUNCTIONS_H
 
 #include <stddef.h>
 void print_name(char *name, void (*f)(char *));
