@@ -25,7 +25,9 @@ int main(int argc, char *argv[])
 	p_main = (char *)main;
 	for (i = 0; i < j; i++)
 	{
-		printf("%02hhx ", p_main[i]);
+		printf("%02hhx", p_main[i]);
+		if (i != j - 1)
+			printf(" ");
 	}
 	return (0);
 }
