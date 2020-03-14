@@ -36,8 +36,10 @@ void fo_float(float n)
 void fo_string(char *s)
 {
 	if (!s || !*s)
+	{
 		printf("(nil)");
-	else
+		return;
+	}
 		printf("%s", s);
 }
 /**
@@ -77,5 +79,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(vl);
 }
-
-
