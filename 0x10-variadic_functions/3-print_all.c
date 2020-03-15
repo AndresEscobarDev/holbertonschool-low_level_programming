@@ -56,7 +56,7 @@ void print_all(const char * const format, ...)
 		{'s', fo_string},
 		{0, 0}
 	};
-
+	char *s = "";
 	va_start(vl, format);
 	while (format && format[i])
 	{
@@ -65,9 +65,9 @@ void print_all(const char * const format, ...)
 		{
 			if (fos[j].fo == format[i])
 			{
+				printf("%s", s);
 				fos[j].f(vl);
-				if (format[i + 1])
-					printf(", ");
+				s = ", ";
 			}
 			j++;
 		}
