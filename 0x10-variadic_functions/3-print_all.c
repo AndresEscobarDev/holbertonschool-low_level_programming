@@ -57,6 +57,7 @@ void print_all(const char * const format, ...)
 		{0, 0}
 	};
 	char *s = "";
+
 	va_start(vl, format);
 	while (format && format[i])
 	{
