@@ -1,6 +1,5 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-#include <string.h>
 /**
  * fo_char - print char.
  * @c: character.
@@ -12,7 +11,7 @@ void fo_char(va_list c)
 }
 /**
  * fo_int - print int.
- * @n: integer.
+ * @i: integer.
  * Return: Nothing.
  */
 void fo_int(va_list i)
@@ -21,7 +20,7 @@ void fo_int(va_list i)
 }
 /**
  * fo_float - print float.
- * @n: character.
+ * @f: character.
  * Return: Nothing.
  */
 void fo_float(va_list f)
@@ -30,18 +29,16 @@ void fo_float(va_list f)
 }
 /**
  * fo_string - print string.
- * @s: string.
+ * @n: string.
  * Return: Nothing.
  */
 void fo_string(va_list n)
 {
 	char *s = va_arg(n, char *);
-	if (!s || !*s)
-	{
-		printf("(nil)");
-		return;
-	}
-		printf("%s", s);
+
+	if (!s)
+		s = "(nil)";
+	printf("%s", s);
 }
 /**
  * print_all - function that prints anything.
@@ -53,15 +50,15 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	va_list vl;
 	fo_t fos[] = {
-        {'c', fo_char},
-        {'i', fo_int},
-        {'f', fo_float},
-        {'s', fo_string},
-        {0, 0}
-    };
+		{'c', fo_char},
+		{'i', fo_int},
+		{'f', fo_float},
+		{'s', fo_string},
+		{0, 0}
+	};
 
 	va_start(vl, format);
-	while (format[i])
+	while (format && format[i])
 	{
 		j = 0;
 		while (fos[j].fo)
