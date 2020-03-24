@@ -9,6 +9,8 @@ size_t print_listint(const listint_t *h)
 {
 	unsigned long int i;
 
+	if(!h)
+		return (0);
 	while (h)
 	{
 		printf("%d\n", h->n);
