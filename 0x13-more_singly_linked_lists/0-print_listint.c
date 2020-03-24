@@ -7,10 +7,8 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	unsigned long int i;
+	size_t i = 0;
 
-	if(!h)
-		return (0);
 	while (h)
 	{
 		printf("%d\n", h->n);
