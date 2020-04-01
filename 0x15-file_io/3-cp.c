@@ -18,7 +18,7 @@ int main(int ac, char **av)
 	fdw = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdw == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	while (i = read(fdr, buf, 1024) > 0)
+	while ((i = read(fdr, buf, 1024)) > 0)
 	{
 		j = write(fdw, buf, i);
 		if (j == -1)
