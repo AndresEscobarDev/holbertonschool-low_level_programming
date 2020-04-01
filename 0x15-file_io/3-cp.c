@@ -7,7 +7,7 @@
  */
 int main(int ac, char **av)
 {
-	int fdr, fdw, i, j, sw = 1;
+	int fdr, fdw, i, j;
 	char buf[1024];
 
 	if (ac != 3)
@@ -18,17 +18,14 @@ int main(int ac, char **av)
 	fdw = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdw == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	while (sw == 1)
+	while (i = read(fdr, buf, 1024) > 0)
 	{
-		i = read(fdr, buf, 1024);
-		if (i == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(98);
 		j = write(fdw, buf, i);
 		if (j == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-		if (i < 1024)
-			sw = 0;
 	}
+	if (i == -1)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(98);
 	if (close(fdr) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdr), exit(100);
 	if (close(fdw) == -1)
