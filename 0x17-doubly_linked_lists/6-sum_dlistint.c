@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * print_dlistint - Function that print a doubly linked list
- * @h: header of a doubly linked list
- * Return: The number of nodes
+ * sum_dlistint - Function that print a doubly linked list
+ * @head: header of a doubly linked list
+ * Return: The add of the node values
  */
 int sum_dlistint(dlistint_t *head)
 {
@@ -15,7 +15,7 @@ int sum_dlistint(dlistint_t *head)
 		while (head->prev)
 			head = head->prev;
 	}
-	while(head)
+	while (head)
 	{
 		s += head->n;
 		head = head->next;
