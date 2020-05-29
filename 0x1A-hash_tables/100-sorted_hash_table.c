@@ -16,7 +16,10 @@ shash_table_t *shash_table_create(unsigned long int size)
 	ht->size = size;
 	ht->array = calloc((size_t)size, sizeof(shash_node_t *));
 	if (!ht->array)
+	{
+		free(ht);
 		return (NULL);
+	}
 	return (ht);
 }
 /**
@@ -49,17 +52,22 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	if (!node)
 		return (0);
 	node->key = strdup(key);
+	if (!node->key)
+	{
+		free(node);
+		return (0);
+	}
 	node->value = strdup(value);
+	if (!node->value)
+	{
+		free(node->key);
+		free(node);
+		return (0);
+	}
 	if (!ht->array[index])
-	{
-		(ht->array[index]) = node;
-		node->next = NULL;
-	}
+		(ht->array[index]) = node, node->next = NULL;
 	else
-	{
-		node->next = ht->array[index];
-		(ht->array[index]) = node;
-	}
+		node->next = ht->array[index], (ht->array[index]) = node;
 	return (add_sort(node, ht));
 }
 /**
