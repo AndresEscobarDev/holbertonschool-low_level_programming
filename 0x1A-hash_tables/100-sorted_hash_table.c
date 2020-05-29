@@ -55,8 +55,11 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		(ht->array[index]) = node;
 		node->next = NULL;
 	}
-	node->next = ht->array[index];
-	(ht->array[index]) = node;
+	else
+	{
+		node->next = ht->array[index];
+		(ht->array[index]) = node;
+	}
 	return (add_sort(node, ht));
 }
 /**
