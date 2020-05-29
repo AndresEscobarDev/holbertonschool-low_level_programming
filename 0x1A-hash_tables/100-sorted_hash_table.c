@@ -14,7 +14,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	if (!ht)
 		return (NULL);
 	ht->size = size;
-	ht->array = calloc(size, sizeof(shash_node_t *));
+	ht->array = calloc((size_t)size, sizeof(shash_node_t *));
 	if (!ht->array)
 		return (NULL);
 	return (ht);
@@ -107,7 +107,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	unsigned long int index;
 
 	if (!ht || !key || !strcmp(key, ""))
-		return (0);
+		return (NULL);
 	index = key_index((unsigned char *)key, ht->size);
 	node = ht->array[index];
 	while (node)
