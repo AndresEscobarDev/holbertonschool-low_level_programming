@@ -83,4 +83,4 @@ void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
 int add_sort(shash_node_t *node, shash_table_t *ht);
 
-#endif /*HASH_TABLE_H
+#endif /*HASH_TABLE_H*/
