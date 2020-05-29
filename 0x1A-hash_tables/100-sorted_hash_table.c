@@ -127,6 +127,8 @@ void shash_table_print(const shash_table_t *ht)
 	shash_node_t *tmp = ht->shead;
 	int b = 0;
 
+	if (!ht)
+		return;
 	printf("{");
 	while (tmp)
 	{
@@ -148,6 +150,8 @@ void shash_table_print_rev(const shash_table_t *ht)
 	shash_node_t *tmp = ht->stail;
 	int b = 0;
 
+	if (!ht)
+		return;
 	printf("{");
 	while (tmp)
 	{
