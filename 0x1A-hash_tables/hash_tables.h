@@ -1,6 +1,9 @@
 #ifndef HASH_TABLE_H
-#define HASH TABLE_H
+#define HASH_TABLE_H
 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -15,7 +18,6 @@ typedef struct hash_node_s
 	char *value;
 	struct hash_node_s *next;
 } hash_node_t;
-
 /**
  * struct hash_table_s - Hash table data structure
  *
@@ -41,13 +43,12 @@ typedef struct hash_table_s
  */
 typedef struct shash_node_s
 {
-     char *key;
-     char *value;
-     struct shash_node_s *next;
-     struct shash_node_s *sprev;
-     struct shash_node_s *snext;
+	char *key;
+	char *value;
+	struct shash_node_s *next;
+	struct shash_node_s *sprev;
+	struct shash_node_s *snext;
 } shash_node_t;
-
 /**
  * struct shash_table_s - Sorted hash table data structure
  *
@@ -60,15 +61,11 @@ typedef struct shash_node_s
  */
 typedef struct shash_table_s
 {
-     unsigned long int size;
-     shash_node_t **array;
-     shash_node_t *shead;
-     shash_node_t *stail;
+	unsigned long int size;
+	shash_node_t **array;
+	shash_node_t *shead;
+	shash_node_t *stail;
 } shash_table_t;
-
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
@@ -86,4 +83,4 @@ void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
 int add_sort(shash_node_t *node, shash_table_t *ht);
 
-#endif
+#endif /*HASH_TABLE_H
