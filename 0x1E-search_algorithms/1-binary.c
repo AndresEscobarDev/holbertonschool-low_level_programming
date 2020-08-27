@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * help_search - Function that searches for a value in a sorted array of integers using the Binary search algorithm.
+ * help_search - Function that searches for a value in a sorted array
+ * of integers using the Binary search algorithm.
  * @array: Pointer to the first element of the array to search in.
  * @l: left index of the array.
  * @r: right index of the array.
@@ -33,7 +34,8 @@ int help_search(int *array, size_t l, size_t r, int value)
 }
 
 /**
- * linear_search - Function that searches for a value in a sorted array of integers using the Binary search algorithm.
+ * binary_search - Function that searches for a value in a sorted array
+ * of integers using the Binary search algorithm.
  * @array: Pointer to the first element of the array to search in.
  * @size: Number of elements in array.
  * @value: Value to search for.

@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * linear_search - Function that searches for a value in an array of integers using the Linear search algorithm
+ * linear_search - Function that searches for a value in an array of
+ * integers using the Linear search algorithm.
  * @array: Pointer to the first element of the array to search in.
  * @size: Number of elements in array.
  * @value: Value to search for.
